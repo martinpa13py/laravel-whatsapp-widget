@@ -1,47 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "deadangroup/laravel-whatsapp-widget",
+    "description": "A simple package to add a Whatsapp widget to any laravel app",
     "keywords": [
-        ":vendor_name",
+        "deadangroup",
         "laravel",
-        ":package_slug"
+        "laravel-whatsapp-widget"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/deadangroup/laravel-whatsapp-widget",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "James Ngugi",
+            "email": "james@dgl.co.ke",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
-    },
-    "require-dev": {
-        "nunomaduro/collision": "^5.3",
-        "orchestra/testbench": "^6.15",
-        "pestphp/pest": "^1.18",
-        "pestphp/pest-plugin-laravel": "^1.1",
-        "spatie/laravel-ray": "^1.23",
-        "vimeo/psalm": "^4.8"
+        "php": ">=7.1",
+        "illuminate/support": "5.8.*|^6.0|^7.0|^8.0|^9.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "DGL\\LaravelWhatsappWidget\\": "src"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "./vendor/bin/pest --no-coverage",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true
@@ -49,11 +30,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "DGL\\LaravelWhatsappWidget\\ModuleServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
