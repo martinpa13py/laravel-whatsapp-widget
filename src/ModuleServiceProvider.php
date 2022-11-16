@@ -28,8 +28,18 @@ class ModuleServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerResources();
-        $this->defineAssetPublishing();
         $this->offerPublishing();
+        $this->configure();
+    }
+
+    /**
+     * Merge configuration with the application configuration.
+     *
+     * @return void
+     */
+    private function configure(): void
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-whatsapp-widget.php', 'laravel-whatsapp-widget');
     }
 
     /**
@@ -43,20 +53,6 @@ class ModuleServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the asset publishing configuration.
-     *
-     * @return void
-     */
-    public function defineAssetPublishing()
-    {
-        $this->publishes([
-            WHATSAPP_WIDGET_PATH.'/public' => public_path('vendor/laravel-whatsapp-widget'),
-        ], [
-            'laravel-whatsapp-assets',
-        ]);
-    }
-
-    /**
      * Setup the resource publishing groups for Horizon.
      *
      * @return void
@@ -67,16 +63,6 @@ class ModuleServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/laravel-whatsapp-widget.php' => config_path('laravel-whatsapp-widget.php'),
             ], 'laravel-whatsapp-widget-config');
-        }
-    }
-
-    /**
-     *
-     */
-    public function register()
-    {
-        if (! defined('WHATSAPP_WIDGET_PATH')) {
-            define('WHATSAPP_WIDGET_PATH', realpath(__DIR__.'/../'));
         }
     }
 }

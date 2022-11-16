@@ -23,6 +23,7 @@ php artisan migrate
 ```
 
 You can publish the config file with:
+
 ```bash
 php artisan vendor:publish --provider="DGL\LaravelWhatsappWidget\LaravelWhatsappWidgetServiceProvider" --tag="laravel-whatsapp-widget-config"
 ```
@@ -39,12 +40,6 @@ return [
 ```php
 $laravel-whatsapp-widget = new DGL\LaravelWhatsappWidget();
 echo $laravel-whatsapp-widget->echoPhrase('Hello, DGL!');
-```
-
-```js
-     "post-update-cmd": [
-    "@php artisan vendor:publish --tag=laravel-whatsapp-assets --ansi --force"
-],
 ```
 
 ## Testing

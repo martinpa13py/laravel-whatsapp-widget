@@ -24,11 +24,6 @@
             "DGL\\LaravelWhatsappWidget\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "DGL\\LaravelWhatsappWidget\\Tests\\": "tests"
-        }
-    },
     "config": {
         "sort-packages": true
     },
@@ -36,10 +31,7 @@
         "laravel": {
             "providers": [
                 "DGL\\LaravelWhatsappWidget\\ModuleServiceProvider"
-            ],
-            "aliases": {
-                "LaravelWhatsappWidget": "DGL\\LaravelWhatsappWidget\\LaravelWhatsappWidgetFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
