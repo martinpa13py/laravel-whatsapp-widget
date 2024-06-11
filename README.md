@@ -15,17 +15,10 @@ You can install the package via composer:
 composer require deadangroup/laravel-whatsapp-widget
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="DGL\LaravelWhatsappWidget\LaravelWhatsappWidgetServiceProvider" --tag="laravel-whatsapp-widget-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="DGL\LaravelWhatsappWidget\LaravelWhatsappWidgetServiceProvider" --tag="laravel-whatsapp-widget-config"
+php artisan vendor:publish --provider="DGL\LaravelWhatsappWidget\ModuleServiceProvider" --tag="laravel-whatsapp-widget-config"
 ```
 
 This is the contents of the published config file:
@@ -36,10 +29,10 @@ return [
 ```
 
 ## Usage
+Include the view on a blade view:
 
 ```php
-$laravel-whatsapp-widget = new DGL\LaravelWhatsappWidget();
-echo $laravel-whatsapp-widget->echoPhrase('Hello, DGL!');
+@include('laravel-whatsapp-widget::widget')
 ```
 
 ## Testing
