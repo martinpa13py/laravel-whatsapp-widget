@@ -10,14 +10,6 @@
  *  <code>Build something people want!</code>
  */
 
-/**
- * This file is part of the DGL Software Stack
- *
- * (c) James Ngugi <james@dgl.co.ke>
- *
- * <code> Build something people want </code>
- *
- */
 
 namespace DGL\LaravelWhatsappWidget;
 
