@@ -11,8 +11,8 @@
         z-index: 16000160 !important;
         bottom: 0 !important;
         text-align: center !important;
-        height: 50px;
-        min-width: 50px;
+        height: 60px;
+        min-width: 60px;
         border-radius: 25px;
         visibility: visible;
         transition: none !important;
