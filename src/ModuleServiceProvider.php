@@ -11,7 +11,7 @@
  */
 
 
-namespace DGL\LaravelWhatsappWidget;
+namespace martinpa13py\LaravelWhatsappWidget;
 
 use Illuminate\Support\ServiceProvider;
 
