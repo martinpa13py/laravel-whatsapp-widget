@@ -1,23 +1,28 @@
 {
-    "name": "deadangroup/laravel-whatsapp-widget",
+    "name": "martinpa13py/laravel-whatsapp-widget",
     "description": "A simple package to add a Whatsapp widget to any laravel app",
     "keywords": [
         "deadangroup",
         "laravel",
         "laravel-whatsapp-widget"
     ],
-    "homepage": "https://github.com/deadangroup/laravel-whatsapp-widget",
+    "homepage": "https://github.com/martinpa13py/laravel-whatsapp-widget",
     "license": "MIT",
     "authors": [
         {
             "name": "James Ngugi",
             "email": "james@dgl.co.ke",
             "role": "Developer"
+        },
+        {
+            "name": "Martin Martinez",
+            "email": "martinpa13_py@hotmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=7.1",
-        "illuminate/support": "5.8.*|^6.0|^7.0|^8.0|^9.0"
+        "illuminate/support": "5.8.*|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
